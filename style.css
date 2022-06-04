@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Epilogue", sans-serif;
+  line-height: 1.5;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  padding: 0 4.8rem;
+}
+
+.container {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 4.8rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  /* adjust line height */
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: hsl(0, 0%, 8%);
+}
+
+.btn-group {
+  display: flex;
+  gap: 4.8rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: hsl(0, 0%, 41%);
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.btn--link {
+  background-color: transparent;
+}
+
+.btn--link:hover,
+.btn--link:active {
+  color: hsl(0, 0%, 8%);
+}
+
+.btn--outline {
+  padding: 1.6rem 3.2rem;
+  border-radius: 14px;
+  background-color: transparent;
+  outline: 2px solid hsl(0, 0%, 41%);
+}
+
+.btn--outline:hover,
+.btn--link:active {
+  color: hsl(0, 0%, 8%);
+  outline: 2px solid hsl(0, 0%, 8%);
+}
+
+/* HERO SECTION */
