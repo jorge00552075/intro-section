@@ -69,6 +69,11 @@ textarea,
 select {
   font: inherit;
 }
+:root {
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+}
 
 /* ****************************** */
 /* HEADER */
@@ -97,24 +102,32 @@ select {
 .nav__list li {
   position: relative;
 }
+/* nav buttons & links */
+.nav__btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: var(--medium-gray);
+  cursor: pointer;
+}
+
+.nav__btn:hover,
+.nav__btn:active {
+  color: var(--almost-black);
+}
 
 .nav__link:link,
 .nav__link:visited {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-
   text-decoration: none;
-  color: hsl(0, 0%, 41%);
+  color: var(--medium-gray);
 }
 
 .nav__link:hover,
 .nav__link:active {
-  color: hsl(0, 0%, 8%);
+  color: var(--almost-black);
 }
 
-.btn-group {
+.header div:last-of-type {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -122,35 +135,28 @@ select {
 }
 
 /* LOGIN & REGISTER LINKS */
-.btn {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 1.4rem;
-  color: hsl(0, 0%, 41%);
-  line-height: 16px;
+.cta {
   text-decoration: none;
+  color: var(--medium-gray);
+  font-size: 1.4rem;
+  line-height: 16px;
 }
-
-.btn--link:link,
-.btn--link:visited {
-}
-
-.btn--link:hover,
-.btn--link:active {
+/* link variant */
+.cta--link:hover,
+.cta--link:active {
   color: hsl(0, 0%, 8%);
 }
-
-.btn--outline:link,
-.btn--outline:visited {
+/* outline variant */
+.cta--outline {
   padding: 1.2rem 2.4rem;
   border-radius: 14px;
-  outline: 2px solid hsl(0, 0%, 41%);
+  outline: 2px solid var(--medium-gray);
 }
 
-.btn--outline:hover,
-.btn--outline:active {
-  color: hsl(0, 0%, 8%);
-  outline-color: hsl(0, 0%, 8%);
+.cta--outline:hover,
+.cta--outline:active {
+  color: var(--almost-black);
+  outline-color: var(--almost-black);
 }
 
 /* ****************************** */
@@ -181,21 +187,21 @@ select {
   display: grid;
   grid-template-columns: 16px 1fr;
   gap: 1.6rem;
-  color: hsl(0, 0%, 41%);
+  color: var(--medium-gray);
   text-decoration: none;
 }
 
 .dropdown__link--simple {
-  color: hsl(0, 0%, 41%);
+  color: var(--medium-gray);
   text-decoration: none;
 }
 
 .dropdown__link:hover {
-  color: hsl(0, 0%, 8%);
+  color: var(--almost-black);
 }
 
 .dropdown__link--simple:hover {
-  color: hsl(0, 0%, 8%);
+  color: var(--almost-black);
 }
 
 .nav__list li:hover .dropdown {
@@ -212,14 +218,13 @@ select {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 114.5rem;
+  gap: 11.2rem;
+  max-width: 114.7rem;
   margin: 0 auto;
-  gap: 96px;
 }
 
 .hero__text-box {
   position: relative;
-  /* centers the text-box */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -232,7 +237,7 @@ select {
   margin-bottom: 4.8rem;
   font-weight: 700;
   font-size: 8rem;
-  color: hsl(0, 0%, 8%);
+  color: var(--almost-black);
   line-height: 80px;
   letter-spacing: -1.11px;
 }
@@ -240,14 +245,16 @@ select {
 .hero__text-box p {
   margin-bottom: 4.8rem;
   font-size: 1.8rem;
-  color: hsl(0, 0%, 41%);
+  color: var(--medium-gray);
   line-height: 28px;
 }
 
-/* LEARN MORE LINK */
-.btn--black {
-  background-color: hsl(0, 0%, 8%);
-  color: hsl(0, 0%, 98%);
+/* Learn More link */
+.cta--solid {
+  background-color: var(--almost-black);
+  color: var(--almost-white);
+  font-size: 1.4rem;
+  line-height: 16px;
   padding: 2rem 3rem;
   border-radius: 14px;
   font-size: 1.8rem;
@@ -255,23 +262,23 @@ select {
   transition: all 0.3s;
 }
 
-.btn--black:hover,
-.btn--black:active {
-  background-color: hsl(0, 0%, 98%);
-  color: hsl(0, 0%, 8%);
-  box-shadow: inset 0 0 0 3px hsl(0, 0%, 8%);
+.cta--solid:hover,
+.cta--solid:active {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+  box-shadow: inset 0 0 0 3px var(--almost-black);
 }
 
 .client-images {
   position: absolute;
   bottom: 0;
-  outline: 6px solid teal;
   display: flex;
   align-items: center;
   gap: 4rem;
 }
 
 .hero__image-box {
+  width: 48rem;
 }
 
 .hero__image-box img {
